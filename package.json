@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "deck.gl": "^7.3.2",
+    "mdns": "^2.5.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-scripts": "3.2.0",

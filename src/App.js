@@ -4,7 +4,7 @@ import { w3cwebsocket as W3CWebSocket } from "websocket";
 import DeckGL from '@deck.gl/react';
 import {COORDINATE_SYSTEM, OrbitView} from '@deck.gl/core';
 import {PointCloudLayer, PathLayer} from '@deck.gl/layers';
-const client = new W3CWebSocket('ws://192.168.2.56:8000');
+const client = new W3CWebSocket('ws://192.168.2.120:8000');
 
 const INITIAL_VIEW_STATE = {
   target: [0, 0, 0],
@@ -29,7 +29,7 @@ class App extends Component {
     this._onViewStateChange = this._onViewStateChange.bind(this);
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     client.onopen = () => {
       console.log('WebSocket Client Connected');
     };
